@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+     <ListGroup>
+            {cartItems.map(cartItem => {
+              <ListGroup.Item key={cartItem.product}>
+                <Row>
+                  <Col md={2}>
+                    <Image src={cartItem.image} alt={cartItem.name} />
+                    <h1>{cartItem}</h1>
+                  </Col>
+                </Row>
+              </ListGroup.Item>;
+            })}
+          </ListGroup>
+
+      {cartItems.length === 0 ? (
+          <Message>
+            Your cart is empty <Link to="/"> Go Back</Link>{" "}
+          </Message>
+        ) : (
+          <h2> {cartItems} </h2>
+        )}
